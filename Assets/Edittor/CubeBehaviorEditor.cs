@@ -10,10 +10,12 @@ public class CubeBehaviorEditor : Editor
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
-
-        var allCubeBehavior = GameObject.FindObjectsOfType<CubeBehavior>();
-        var allCubeGameObjects = allCubeBehavior.Select(cube => cube.gameObject).ToArray();
-        Selection.objects = allCubeGameObjects;
+        if (GUILayout.Button("Select All Cubes"))
+        {
+            var allCubeBehavior = GameObject.FindObjectsOfType<CubeBehavior>();
+            var allCubeGameObjects = allCubeBehavior.Select(cube => cube.gameObject).ToArray();
+            Selection.objects = allCubeGameObjects;
+        }
 
     }
 }
