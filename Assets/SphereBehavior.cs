@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class SphereBehavior : MonoBehaviour
 {
-//No Object Behavior
+    public float size = 1.0f;
 }

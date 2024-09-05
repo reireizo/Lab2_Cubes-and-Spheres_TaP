@@ -9,9 +9,21 @@ public class CubeBehaviorEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        base.OnInspectorGUI();
+        serializedObject.Update();
 
+        var size = serializedObject.FindProperty("size");
+
+        EditorGUILayout.PropertyField(size);
+
+        serializedObject.ApplyModifiedProperties();
+
+        if (size.floatValue != 1)
+        {
+            EditorGUILayout.HelpBox("The size has been changed!",MessageType.Warning);
+        }
+        
         EditorGUILayout.BeginHorizontal();
+        
 
         if (GUILayout.Button("Select All Cubes"))
         {

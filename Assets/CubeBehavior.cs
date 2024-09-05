@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class CubeBehavior : MonoBehaviour
 {
- // No object behavior
+    public float size = 1.0f;
 }
 

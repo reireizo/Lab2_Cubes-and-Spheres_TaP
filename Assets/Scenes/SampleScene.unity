@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f788b0b3d3b0984409b82722c83c645b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1
 --- !u!1 &107612724
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe660ed1f4a39b4b8b4085bf98fd2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe660ed1f4a39b4b8b4085bf98fd2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,6 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f788b0b3d3b0984409b82722c83c645b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1
 --- !u!1 &1223230232
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f788b0b3d3b0984409b82722c83c645b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1
 --- !u!1 &1341687408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe660ed1f4a39b4b8b4085bf98fd2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1
 --- !u!1 &1377560406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f788b0b3d3b0984409b82722c83c645b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1
 --- !u!1 &1608680693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe660ed1f4a39b4b8b4085bf98fd2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1
 --- !u!1 &1960463750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,6 +1378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f788b0b3d3b0984409b82722c83c645b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1
 --- !u!1 &2015121051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe660ed1f4a39b4b8b4085bf98fd2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
