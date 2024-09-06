@@ -7,11 +7,16 @@ using System.Linq;
 [CustomEditor(typeof(CubeBehavior)), CanEditMultipleObjects]
 public class CubeBehaviorEditor : Editor
 {
+    public bool disabled = false;
+
+
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
 
         var size = serializedObject.FindProperty("size");
+
+        var originalColor = GUI.backgroundColor;
 
         EditorGUILayout.PropertyField(size);
 
@@ -36,12 +41,31 @@ public class CubeBehaviorEditor : Editor
             Selection.objects = new Object[] { (target as CubeBehavior).gameObject };
         }
 
+        if (disabled == true)
+        {
+            GUI.backgroundColor = originalColor;
+        }
+        else
+        {
+            GUI.backgroundColor = Color.green;
+        }
+
         if (GUILayout.Button("Disable/Enable All Cubes", GUILayout.Height(20)))
         {
             foreach (var cube in GameObject.FindObjectsOfType<CubeBehavior>(true))
             {
                 cube.gameObject.SetActive(!cube.gameObject.activeSelf);
             }
+
+            if (disabled == false)
+            {
+                disabled = true;
+            }
+            else
+            {
+                disabled = false;
+            }
+
         }
 
         EditorGUILayout.EndHorizontal();
