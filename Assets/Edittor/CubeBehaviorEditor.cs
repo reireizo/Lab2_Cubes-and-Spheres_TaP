@@ -36,6 +36,14 @@ public class CubeBehaviorEditor : Editor
             Selection.objects = new Object[] { (target as CubeBehavior).gameObject };
         }
 
+        if (GUILayout.Button("Disable/Enable All Cubes", GUILayout.Height(20)))
+        {
+            foreach (var cube in GameObject.FindObjectsOfType<CubeBehavior>(true))
+            {
+                cube.gameObject.SetActive(!cube.gameObject.activeSelf);
+            }
+        }
+
         EditorGUILayout.EndHorizontal();
 
     }

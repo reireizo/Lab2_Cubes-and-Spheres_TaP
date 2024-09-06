@@ -35,6 +35,14 @@ public class SphereBehaviorEditor : Editor
             Selection.objects = new Object[] { (target as SphereBehavior).gameObject };
         }
 
+        if (GUILayout.Button("Disable/Enable All Spheres", GUILayout.Height(20)))
+        {
+            foreach (var sphere in GameObject.FindObjectsOfType<SphereBehavior>(true))
+            {
+                sphere.gameObject.SetActive(!sphere.gameObject.activeSelf);
+            }
+        }
+
         EditorGUILayout.EndHorizontal();
     }
 }
