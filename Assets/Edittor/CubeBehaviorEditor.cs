@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System.Linq;
+using Unity.VisualScripting;
 
 [CustomEditor(typeof(CubeBehavior)), CanEditMultipleObjects]
 public class CubeBehaviorEditor : Editor
 {
-    public bool disabled = false;
-
-
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
@@ -36,12 +34,12 @@ public class CubeBehaviorEditor : Editor
             var allCubeGameObjects = allCubeBehavior.Select(cube => cube.gameObject).ToArray();
             Selection.objects = allCubeGameObjects;
         }
-        if (GUILayout.Button("ClearSelection"))
+        if (GUILayout.Button("Clear Selection"))
         {
             Selection.objects = new Object[] { (target as CubeBehavior).gameObject };
         }
 
-        if (disabled == true)
+        if ((target as CubeBehavior).gameObject.activeSelf == false)
         {
             GUI.backgroundColor = originalColor;
         }
@@ -55,15 +53,6 @@ public class CubeBehaviorEditor : Editor
             foreach (var cube in GameObject.FindObjectsOfType<CubeBehavior>(true))
             {
                 cube.gameObject.SetActive(!cube.gameObject.activeSelf);
-            }
-
-            if (disabled == false)
-            {
-                disabled = true;
-            }
-            else
-            {
-                disabled = false;
             }
 
         }

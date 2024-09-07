@@ -7,7 +7,6 @@ using System.Linq;
 [CustomEditor(typeof(SphereBehavior)), CanEditMultipleObjects]
 public class SphereBehaviorEditor : Editor
 {
-    public bool disabled = false;
 
     public override void OnInspectorGUI()
     {
@@ -39,7 +38,7 @@ public class SphereBehaviorEditor : Editor
             Selection.objects = new Object[] { (target as SphereBehavior).gameObject };
         }
 
-        if (disabled == true)
+        if ((target as SphereBehavior).gameObject.activeSelf == false)
         {
             GUI.backgroundColor = originalColor;
         }
@@ -53,15 +52,6 @@ public class SphereBehaviorEditor : Editor
             foreach (var sphere in GameObject.FindObjectsOfType<SphereBehavior>(true))
             {
                 sphere.gameObject.SetActive(!sphere.gameObject.activeSelf);
-            }
-
-            if (disabled == false)
-            {
-                disabled = true;
-            }
-            else
-            {
-                disabled = false;
             }
         }
 
